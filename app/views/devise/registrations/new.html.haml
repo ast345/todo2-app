@@ -1,0 +1,23 @@
+.devise
+  .title
+    %h2 Sign up
+  .form-box
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .devise_field
+        .box-email
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: 'text'
+      .devise_field
+        .box-password
+          = f.label :password
+          %br/
+          = f.password_field :password, autocomplete: "new-password", class: 'text'
+      .devise_field
+        .box-password
+          = f.label :password_confirmation
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password", class: 'text'
+      .actions
+        = f.submit "Submit", class: 'btn-primary'
