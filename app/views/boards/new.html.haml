@@ -1,0 +1,19 @@
+.devise
+  .title
+    %h2 New Board
+  - @board.errors.full_messages.each do |message|
+    %li= message
+  .form-box
+    = form_with(model: @board, local: true) do |f|
+      .devise_field
+        .box-name
+          = f.label :name, 'Name'
+          %br/
+          = f.text_field :name, class: 'text'
+      .devise_field
+        .box-description
+          = f.label :description, 'Description'
+          %br/
+          = f.text_area :description, class: "textarea"
+      .actions
+        = f.submit 'submit'

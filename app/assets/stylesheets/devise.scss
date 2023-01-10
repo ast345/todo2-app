@@ -40,7 +40,7 @@ $container-padding: 16px;
     .devise_field{
         height: 69px;
 
-        .box-email label, .box-password label{
+        .box-email label, .box-password label, .box-name label, .box-description label{
             position: absolute;
             height: 25px;
             margin-top: 33px;
@@ -57,12 +57,12 @@ $container-padding: 16px;
             color: #000000;
         }
 
-        .box-password{
+        .box-password, .box-description{
             position: relative;
             margin-top: 33px;
         }
 
-        .box-email input[type="email"], .box-password input[type="password"] {
+        .box-email input[type="email"], .box-password input[type="password"], .box-name input[type="text"] {
             border: 0px;
             position: relative;
             margin-top: 40px;
@@ -73,11 +73,17 @@ $container-padding: 16px;
             border-radius: 10px;
         }
 
+        .textarea{
+            border: 0px;
+            position: relative;
+            width: 362px;
+            height: 203px;
+            margin-top: 40px;
+            
+            background: #F4F4F4;
+            border-radius: 10px;
+        }
 
-    }
-
-    .actions{
-        
 
     }
 
@@ -88,6 +94,7 @@ $container-padding: 16px;
         height: 40px;
         // left: 30px;
         top: 514px;
+        margin-bottom: 32px;
 
         background: #F8BD1C;
         border-radius: 4px;
