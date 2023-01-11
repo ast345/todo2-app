@@ -1,0 +1,8 @@
+= link_to board_path(board) do
+  .card_content
+    .titile
+      %p= board.name
+    .card_description
+      %p= board.description
+    .card_author
+      = image_tag board.user.avatar_image
