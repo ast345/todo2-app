@@ -43,9 +43,29 @@
    background-color: $base-bg-color;
    font-size: 1em;
    color: $text-base-color;
+   
  }
  
  .container {
-   padding: 16px 16px;
+   padding: 16px 32px;
    width: 100%;
+   
+
+   .title{
+     position: relative;
+     width: 183px;
+     height: 36px;
+     top: 33px;
+     margin-bottom: 80px;
+
+     font-family: 'Avenir';
+     font-style: normal;
+     font-weight: 800;
+     font-size: 26px;
+     line-height: 36px;
+      /* identical to box height */
+
+
+     color: #000000;
+   }
  }

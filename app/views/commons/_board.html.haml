@@ -1,9 +1,11 @@
-.card
-  = link_to board_path(board) do
+= link_to board_path(board) class:"link" do
+  .card
     .card_content
-      .titile
+      .card-menu
+        = image_tag 'card-menu.svg', class: 'header-avatar dropbtn'
+      .card-title
         = board.name
       .card_description
-        %p= board.description
-    .card_author
-      = image_tag board.user.avatar_image
+        = board.description
+      .card_author
+        = image_tag board.user.avatar_image, class: "avatar"
