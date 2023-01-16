@@ -1,8 +1,13 @@
 = link_to board_path(board), class:"link" do
   .card
     .card_content
-      .card-menu
-        = image_tag 'card-menu.svg', class: 'header-avatar dropbtn'
+      -if user_signed_in?
+        .board_detail_actions
+          .dropdown
+            = image_tag 'card-menu.svg', class: 'dropbtn'
+            .dropdown-content.mini
+              = link_to "Edit", edit_board_path(board)
+              = link_to "Delete", board_path(board), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
       .card-title
         = board.name
       .card_description

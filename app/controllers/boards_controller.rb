@@ -13,7 +13,7 @@ class BoardsController < ApplicationController
     def create
         @board = current_user.boards.build(board_params)
         if @board.save
-            redirect_to board_path(@board)
+            redirect_to boards_path
         end
     end
 
@@ -32,6 +32,12 @@ class BoardsController < ApplicationController
 
     def set_board
         @board = Board.find(params[:id])
+    end
+
+    def destroy
+        board = Board.find(params[:id])
+        board.destroy!
+        redirect_to boards_path, notice: '記事が削除できました'
     end
 
     private
