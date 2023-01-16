@@ -1,0 +1,7 @@
+.container
+  .title All Boards
+  - @boards.each do |board|
+    = render 'commons/board', board: board
+  .add-new-board
+    = link_to "+Add new board", new_board_path, class:"add-new-board-title"
+

@@ -3,60 +3,71 @@
 $heart-size: 16px;
 $avatar-size: 32px;
 
+.link{
+  text-decoration: none;
+}
+
 .card {
-  background-color: white;
+  background-color: #F4F4F4;
   margin: 16px 0;
   cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-
-  &_heart {
-    display: flex;
-
-    img {
-      width: $heart-size;
-      height: $heart-size;
-    }
-
-    span {
-      margin-left: 8px;
-      font-size: 12px;
-      font-weight: bold;
-      color: $primary-color;
-      line-height: $heart-size;
-    }
-  }
-
-  &_detail {
-    padding-top: 12px;
-    cursor: pointer;
-    display: flex;
-    font-size: 10px;
-
-    img {
-      width: $avatar-size;
-      height: $avatar-size;
-      border-radius: 100%;
-      margin-right: 8px;
-    }
-  }
+  border-radius: 10px;
+  text-decoration-line: none;
+  padding-bottom: 32px;
 
   &_content {
     padding: 16px 16px;
-  }
+    height: auto;
+    
 
-  &_image {
-    height: 180px;
-    position: relative;
-    overflow: hidden;
+    .card-title{
+      position: relative;
+      margin-bottom: 6px;
+      
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      color: #000000;
+      text-decoration: none;
+      
 
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      width: 100%;
+    }
+
+    .card-menu{
+      float: right;
+    }
+
+    .card_description{
+      position: relative;
+      top: 5px;
+
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+
+      color: #000000;
+
+      mix-blend-mode: normal;
+      opacity: 0.4;
+    }
+
+    .card_author {
+      position: relative;
+      width: 30px;
+      padding: 16px 16px;
+      top: 29px;
+  
+      .avatar {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
     }
   }
 }

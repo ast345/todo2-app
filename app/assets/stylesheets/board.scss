@@ -31,4 +31,56 @@ $container-padding: 16px;
         color: #000000;
     }
 
+    &_detail {
+        padding-top: 10px;
+        display: flex;
+        font-size: 12px;
+        position: relative;
+    
+        img {
+          cursor: pointer;
+        //   width: $avatar-size;
+        //   height: $avatar-size;
+          border-radius: 100%;
+          margin-right: 16px;
+        }
+    
+        &_actions {
+            display: flex;
+            justify-content: flex-end;
+        //   right: 0px;
+        //   position: absolute;
+        }
+      }
+
+}
+
+.add-new-board{
+    position: relative;
+    height: 160px;
+
+    background: #FFFFFF;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    
+
+    .add-new-board-title{
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        
+        /* identical to box height */
+
+        text-align: center;
+        text-decoration: none;
+        color: #000000;
+
+        position: relative;
+        // top: calc(50% - 25px/2);
+        display: block;
+        padding: 67px;
+        
+
+    }
 }
