@@ -32,3 +32,33 @@ $container-padding: 16px;
     }
 
 }
+
+.add-new-board{
+    position: relative;
+    height: 160px;
+
+    background: #FFFFFF;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    
+
+    .add-new-board-title{
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        /* identical to box height */
+
+        text-align: center;
+        text-decoration: none;
+        color: #000000;
+
+        position: relative;
+        top: calc(50% - 25px/2);
+        display: block;
+        text-align: center;
+        
+
+    }
+}
