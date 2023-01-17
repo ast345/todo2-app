@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :boards, dependent: :destroy
   has_one :profile, dependent: :destroy
+  has_many :tasks
+  
 
   def avatar_image
     if profile&.avatar&.attached?
