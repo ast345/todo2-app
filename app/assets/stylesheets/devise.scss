@@ -40,7 +40,7 @@ $container-padding: 16px;
     .devise_field{
         height: 69px;
 
-        .box-email label, .box-password label, .box-name label, .box-description label{
+        .box-email label, .box-password label, .box-name label, .box-description label, .box-eyecatch label {
             position: absolute;
             height: 25px;
             margin-top: 33px;
@@ -71,6 +71,14 @@ $container-padding: 16px;
 
             background: #F4F4F4;
             border-radius: 10px;
+        }
+
+        .box-eyecatch input[type="file"]{
+            border: 0px;
+            position: relative;
+            margin-top: 40px;
+            width: 362px;
+            height: 40px;
         }
 
         .textarea{
