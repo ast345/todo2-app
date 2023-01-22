@@ -1,16 +1,16 @@
-= link_to board_path(board), class:"link" do
-  .card
-    .card_content
-      -if user_signed_in?
-        .board_detail_actions
-          .dropdown
-            = image_tag 'card-menu.svg', class: 'dropbtn'
-            .dropdown-content.mini
-              = link_to "Edit", edit_board_path(board)
-              = link_to "Delete", board_path(board), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
-      .card-title
-        = board.name
-      .card_description
-        = board.description
-      .card_author
-        = image_tag board.user.avatar_image, class: "avatar"
+.card
+  -if user_signed_in?
+    .card_actions
+      .dropdown
+        = image_tag 'card-menu.svg'
+        .dropdown-content.mini
+          = link_to "Edit", edit_board_path(board)
+          = link_to "Delete", board_path(board), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+    = link_to board_tasks_path(board),class: 'link' do
+      .card_content
+        .card-title
+          = board.name
+        .card_description
+          = board.description
+        .card_author
+          = image_tag board.user.avatar_image, class: "avatar"
