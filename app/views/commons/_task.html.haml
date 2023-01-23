@@ -8,6 +8,9 @@
           -# = link_to "Delete", board_task_path(task), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
     = link_to board_tasks_path(task),class: 'link' do
       .card_content
+        - if task.eyecatch.attached?
+          .card_image
+            = image_tag task.eyecatch
         .card-title
           = task.title
         .card_description
