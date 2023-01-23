@@ -1,0 +1,23 @@
+.task
+  - if @task.eyecatch.attached?
+    .task_image
+      = image_tag @task.eyecatch
+  %h1.task_title= @task.title
+  - if user_signed_in?
+    .task_detail_actions
+      .dropdown
+        = image_tag 'card-menu.svg', class: 'dropbtn'
+        -#   .dropdown-content.mini
+        -#     = link_to "Edit", edit_article_path(@article)
+        -#     = link_to "Delete", article_path(@article), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+  .tasl_content
+    = @task.content
+-#   - if user_signed_in?
+-#     - if current_user.has_liked?(@article)
+-#       .article_heart
+-#         = link_to article_like_path(@article), data: { method: 'delete' } do
+-#           = image_tag 'heart-active.svg'
+-#     - else
+-#       .article_heart
+-#         = link_to article_like_path(@article), data: { method: 'post' } do
+-#           = image_tag 'heart.svg'

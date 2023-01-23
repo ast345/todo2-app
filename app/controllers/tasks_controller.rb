@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
     def index
+        # board = Board.find(params[:board_id])
         @task =Task.all
+        # @task.board_id = board.id
     end
 
     def new
@@ -11,7 +13,6 @@ class TasksController < ApplicationController
 
     def create
         board = Board.find(params[:board_id])
-        # tasks = current_user.tasks
         @task = current_user.tasks.new(task_params)
         @task.board_id = board.id
         if @task.save
@@ -20,6 +21,12 @@ class TasksController < ApplicationController
             flash.now[:error] = '保存できませんでした'
             render :new
         end
+    end
+
+    def show
+        # board = Board.find(params[:board_id])
+        @task = Task.find(params[:id])
+        # @task.board_id = board.id
     end
 
     def edit
@@ -34,6 +41,6 @@ class TasksController < ApplicationController
 
     private
     def task_params
-        params.require(:task).permit(:title, :content, :eyecatch)
+        params.require(:task).permit(:title, :content, :eyecatch, :id)
     end
 end
