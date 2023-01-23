@@ -1,8 +1,6 @@
-.task
-  - if @task.eyecatch.attached?
-    .task_image
-      = image_tag @task.eyecatch
-  %h1.task_title= @task.title
+.container
+  .title
+    %h2= @task.title
   - if user_signed_in?
     .task_detail_actions
       .dropdown
@@ -10,7 +8,11 @@
         -#   .dropdown-content.mini
         -#     = link_to "Edit", edit_article_path(@article)
         -#     = link_to "Delete", article_path(@article), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
-  .tasl_content
+  - if @task.eyecatch.attached?
+    .task_image
+      = image_tag @task.eyecatch
+  .task_content
+    .task_content_box
     = @task.content
 -#   - if user_signed_in?
 -#     - if current_user.has_liked?(@article)
