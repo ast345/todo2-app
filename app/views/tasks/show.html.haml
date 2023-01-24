@@ -14,6 +14,10 @@
   .task_content
     .task_content_box
     = @task.content
+  .task_comment
+    = link_to new_task_comment_path(@task), class: "link" do
+      .task_comment_btn
+        + Add new comment
 -#   - if user_signed_in?
 -#     - if current_user.has_liked?(@article)
 -#       .article_heart

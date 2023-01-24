@@ -1,19 +1,47 @@
-.task_content{
-    background: #F4F4F4;
-    border-radius: 10px;
+.task{
+    &_content{
+        background: #F4F4F4;
+        border-radius: 10px;
 
-    &_box{
-        // left: 41px;
-        // top: 384px;
-        // display: block;
+        &_box{
+            // left: 41px;
+            // top: 384px;
+            // display: block;
 
-        font-family: 'Avenir';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 19px;
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
 
-        color: #000000;
+            color: #000000;
+        }
     }
-    
+
+    &_comment{
+        height: 57px;
+
+        background: #FFFFFF;
+        border: 1px dashed rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+
+        &_btn{
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: center;
+
+            color: #000000;
+
+            position: relative;
+            height: 19px;
+
+            left: 0.37%;
+            right: 0.37%;
+            top: calc(50% - 19px/2);
+        }
+    }
+
 }
