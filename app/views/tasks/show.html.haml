@@ -1,20 +1,31 @@
 .container
-  .title
-    %h2= @task.title
-  - if user_signed_in?
-    .task_detail_actions
-      .dropdown
-        = image_tag 'card-menu.svg', class: 'dropbtn'
-        -#   .dropdown-content.mini
-        -#     = link_to "Edit", edit_article_path(@article)
-        -#     = link_to "Delete", article_path(@article), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+  .task_top
+    .task_top_title
+      %h2= @task.title
+    - if user_signed_in?
+      .task_detail_actions
+        .dropdown
+          = image_tag 'card-menu.svg', class: 'dropbtn'
+          -#   .dropdown-content.mini
+          -#     = link_to "Edit", edit_article_path(@article)
+          -#     = link_to "Delete", article_path(@article), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
   - if @task.eyecatch.attached?
     .task_image
-      = image_tag @task.eyecatch
+      = image_tag @task.eyecatch, class: 'eyecatch'
   .task_content
     .task_content_box
-    = @task.content
+      = @task.content
   .task_comment
+    .task_comment_title
+      Commnent
+    .task_comment_all
+    - @comments.each do |comment|
+      .task_comment_container
+        .task_comment_author
+          = image_tag @task.user.avatar_image, class: "avatar"
+        .task_comment_content
+          %p= comment.content
+  .task_comment_new
     = link_to new_task_comment_path(@task), class: "link" do
       .task_comment_btn
         + Add new comment

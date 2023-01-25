@@ -1,13 +1,43 @@
 .task{
+    &_top{
+        position: relative;
+        display: block;
+        top:32px;
+        height: 36px;
+
+        &_title{
+            display: inline-block;
+            // justify-content: start;
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 26px;
+            line-height: 36px;
+            /* identical to box height */
+            color: #000000;
+        }
+    }
+    &_detail_actions{
+        position: relative;
+        float: right;
+        margin-top: 15px;
+        // display: inline-block;
+        // justify-content: right;
+    }
     &_content{
         background: #F4F4F4;
         border-radius: 10px;
+        margin-top: 32px;
 
         &_box{
             // left: 41px;
             // top: 384px;
-            // display: block;
 
+            display: inline-block;
+            margin-left: 15px;
+            margin-right: 16px;
+            margin-top: 20px;
+            margin-bottom: 26px;
             font-family: 'Avenir';
             font-style: normal;
             font-weight: 400;
@@ -18,12 +48,78 @@
         }
     }
 
-    &_comment{
-        height: 57px;
+    &_image{
+        position: relative;
+        margin-top: 60px;
+        width: auto;
+        // height: 170px;
+        .eyecatch{
+            border-radius: 8px;
+        }
+    }
 
-        background: #FFFFFF;
-        border: 1px dashed rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
+    &_comment{
+        &_title{
+            position: relative;
+            display:block;
+            top: 35px;
+            padding-bottom: 25px;
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 26px;
+            color: #000000;
+        }
+
+        &_all{
+            margin-top: 32px;
+        }
+
+        &_container{
+            position: relative;
+            margin-bottom: 32px;
+            height: 32px;
+        }
+
+        &_author{
+            position: relative;
+            display: inline-block;
+            width: 30px;
+
+            .avatar {
+                display: inline;
+                position: absolute;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                width: 100%;
+            }
+        }
+
+        &_content{
+            display: inline-block;
+            justify-content: flex-end;
+            margin-left: 16px;
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #000000;
+        }
+
+
+
+        &_new{
+            position: relative;
+            // top: 32px;
+            height: 57px;
+
+            background: #FFFFFF;
+            border: 1px dashed rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
 
         &_btn{
             font-family: 'Avenir';
@@ -36,7 +132,7 @@
             color: #000000;
 
             position: relative;
-            height: 19px;
+            // height: 19px;
 
             left: 0.37%;
             right: 0.37%;

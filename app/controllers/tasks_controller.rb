@@ -24,9 +24,8 @@ class TasksController < ApplicationController
     end
 
     def show
-        # board = Board.find(params[:board_id])
         @task = Task.find(params[:id])
-        # @task.board_id = board.id
+        @comments = @task.comments
     end
 
     def edit
