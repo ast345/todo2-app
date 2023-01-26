@@ -32,10 +32,21 @@ class TasksController < ApplicationController
         @task = Task.find(params[:id])
     end
 
+    def update
+        @task = Task.find(params[:id])
+        if @task.update(task_params)
+            redirect_to task_path(@task), notice: '更新できました'
+        else
+            flash.now[:erron] = '更新に失敗しました'
+            render :edit
+        end
+    end
+
     def destroy
         task = Task.find(params[:id])
+        board_id = task.board_id
         task.destroy!
-        redirect_to boards_path, notice: '記事が削除できました'
+        redirect_to board_tasks_path(board_id), notice: '記事が削除できました'
     end
 
     private

@@ -6,9 +6,9 @@
       .task_detail_actions
         .dropdown
           = image_tag 'card-menu.svg', class: 'dropbtn'
-          -#   .dropdown-content.mini
-          -#     = link_to "Edit", edit_article_path(@article)
-          -#     = link_to "Delete", article_path(@article), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+          .dropdown-content.mini
+            = link_to "Edit", edit_task_path(@task)
+            = link_to "Delete", task_path(@task), data: {method: 'delete', confirm: '本当に削除してもよろしいですか？' }
   - if @task.eyecatch.attached?
     .task_image
       = image_tag @task.eyecatch, class: 'eyecatch'
