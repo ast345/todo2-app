@@ -23,14 +23,13 @@ $avatar-size: 32px;
     .card-title{
       position: relative;
       margin-bottom: 6px;
-      
       font-family: 'Avenir';
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
       color: #000000;
       text-decoration: none;
-      
+      display: inline-block;
 
     }
 
@@ -69,5 +68,25 @@ $avatar-size: 32px;
         width: 100%;
       }
     }
+  }
+
+  &_actions {
+    padding: 15px;
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+
+    // img {
+    //   cursor: pointer;
+    //   width: $avatar-size;
+    //   height: $avatar-size;
+    //   border-radius: 100%;
+    //   margin-right: 16px;
+    // }
+
+    // &_actions {
+    //   right: 0px;
+    //   position: absolute;
+    // }
   }
 }

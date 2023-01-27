@@ -1,0 +1,6 @@
+.container
+  .title Brackets
+  - @task.each do |task|
+    = render 'commons/task', task: task
+  .add-new-board
+    = link_to "+Add new card", new_board_task_path, class:"add-new-board-title"

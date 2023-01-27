@@ -1,0 +1,24 @@
+.devise
+  .title
+    %h2 Edit Card
+  - @task.errors.full_messages.each do |message|
+    %li= message
+  .form-box
+    = form_with(model: @task, url: task_path(@task), method: "put", local: true) do |f|
+      .devise_field
+        .box-eyecatch
+          = f.label :eyecatch, 'EyeCatch'
+          %br/
+          = f.file_field :eyecatch
+      .devise_field
+        .box-name
+          = f.label :name, 'Name'
+          %br/
+          = f.text_field :title, class: 'text'
+      .devise_field
+        .box-description
+          = f.label :description, 'Description'
+          %br/
+          = f.text_area :content, class: "textarea"
+      .actions
+        = f.submit 'submit'
