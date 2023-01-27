@@ -7,15 +7,15 @@ default: &default
 
 development:
   <<: *default
-  database: blogapp_development
+  database: todo2_app_development
 
 test:
   <<: *default
-  database: blogapp_test
+  database: todo2_app_test
 
 production:
   <<: *default
-  database: blogapp_production
-  username: blogapp
+  database: todo2_app_production
+  username: todo2_app
   password: <%= ENV['DATABASE_PASSWORD'] %>
   host: <%= ENV['DATABASE_HOST'] %>
