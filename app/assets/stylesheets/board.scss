@@ -8,7 +8,7 @@ $container-padding: 16px;
 
     .title{
         position: relative;
-        width: 183px;
+        width: 250px;
         height: 36px;
         top: 33px;
         margin-bottom: 33px;
@@ -16,6 +16,8 @@ $container-padding: 16px;
 
     h2 {
         position: absolute;
+        display: block;
+        width: 250px;
         height: 36px;
         left: 0%;
         top: calc(50% - 36px/2);
