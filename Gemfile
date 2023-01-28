@@ -55,6 +55,14 @@ group :test do
   gem 'webdrivers'
 end
 
+group :production do
+  # Use postgresql as the database for Active Record
+  gem 'pg', '~> 0.15'
+  # Use easily Heroku with Rails
+  gem 'rails_12factor'
+end
+
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
